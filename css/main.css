@@ -69,6 +69,7 @@ img {
           animation: blur 5s ease 0s infinite;
 }
 .main-section .bio-wrapper {
+  background: #b66837;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,25 +83,22 @@ img {
   font-weight: 700;
   font-size: 3rem;
   padding: 2rem;
-  color: #de6a5d;
-  border-bottom: 3px solid #f0aba4;
 }
 .main-section .contact-wrapper {
-  background: #f0aba4;
+  background: #b66837;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-weight: 700;
   font-size: 2rem;
   padding: 2rem;
   color: #fff;
-  border-bottom: 3px solid #f0aba4;
 }
 .ratio-wrapper {
   display: -webkit-box;

@@ -1,0 +1,228 @@
+@colorPink: #f0aba4;
+@colorPinkDark: #de6a5d;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.18") format("woff2"),
+    url("../fonts/Inter-Regular.woff?v=3.18") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2?v=3.18") format("woff2"),
+    url("../fonts/Inter-Light.woff?v=3.18") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraLight.woff2?v=3.18") format("woff2"),
+    url("../fonts/Inter-ExtraLight.woff?v=3.18") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2?v=3.18") format("woff2"),
+    url("../fonts/Inter-Bold.woff?v=3.18") format("woff");
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-section {
+  height: 100vh;
+
+  .background-image {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+
+      &.animated {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // animation-duration: 20s;
+        // animation-delay: 0;
+        // animation-timing-function: linear;
+        // animation-iteration-count: infinite;
+        // animation-fill-mode: forwards;
+        // animation-name: glitch-anim-3;
+        animation: blur 5s ease 0s infinite;
+      }
+    }
+  }
+
+  .bio-wrapper {
+    // background: @colorPink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 2rem;
+    color: @colorPinkDark;
+    border-bottom: 3px solid @colorPink;
+  }
+
+  .contact-wrapper {
+    background: @colorPink;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 2rem;
+    color: #fff;
+    border-bottom: 3px solid @colorPink;
+  }
+}
+
+.ratio-wrapper {
+  display: flex;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  > .ratio-element {
+    &:first-child {
+      flex-basis: 66.666%;
+    }
+    &:last-child {
+      flex-basis: 33.333%;
+    }
+  }
+}
+
+@keyframes blur {
+  0%,
+  100% {
+    filter: blur(0px) saturate(100%);
+    opacity: 0;
+    transform: rotate(1deg);
+  }
+  50% {
+    filter: blur(1px) saturate(50%);
+    opacity: 0.3;
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes glitch-anim-3 {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, -5px, 0) scale3d(-1, -1, 1);
+    clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+  }
+
+  5% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+  }
+
+  11% {
+    clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+  }
+
+  20% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+  }
+
+  25% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+  }
+
+  35% {
+    clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+  }
+
+  42% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+  }
+
+  48% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+  }
+
+  50% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+  }
+
+  56% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+  }
+
+  61% {
+    clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+  }
+
+  68% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+  }
+
+  72% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+  }
+
+  77% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+  }
+
+  81% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+  }
+
+  86% {
+    clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+  }
+
+  90% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+  }
+
+  92% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+  }
+
+  94% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+  }
+}

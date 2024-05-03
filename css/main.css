@@ -26,8 +26,16 @@
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2?v=3.18") format("woff2"), url("../fonts/Inter-Bold.woff?v=3.18") format("woff");
 }
+
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   font-family: "Inter", sans-serif;
+  font-family: "Reenie Beanie", cursive;
 }
 html,
 body {
